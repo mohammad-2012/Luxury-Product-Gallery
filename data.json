@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop 1",
+    "url": "./assets/images/image (1).jpg",
+    "price": "245000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 2,
+    "name": "Laptop 2",
+    "url": "./assets/images/image (2).jpg",
+    "price": "215000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 3,
+    "name": "Laptop 3",
+    "url": "./assets/images/image (3).jpg",
+    "price": "280000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 4,
+    "name": "Laptop 4",
+    "url": "./assets/images/image (4).jpg",
+    "price": "190000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 5,
+    "name": "Laptop 5",
+    "url": "./assets/images/image (5).jpg",
+    "price": "160000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 6,
+    "name": "Laptop 6",
+    "url": "./assets/images/image (6).jpg",
+    "price": "150000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 7,
+    "name": "Laptop 7",
+    "url": "./assets/images/image (7).jpg",
+    "price": "73000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 8,
+    "name": "Laptop 8",
+    "url": "./assets/images/image (8).jpg",
+    "price": "50000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 9,
+    "name": "Laptop 9",
+    "url": "./assets/images/image (9).jpg",
+    "price": "60000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  },
+  {
+    "id": 10,
+    "name": "Laptop 10",
+    "url": "./assets/images/image (10).jpg",
+    "price": "88000000",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elitpariatur quos."
+  }
+]

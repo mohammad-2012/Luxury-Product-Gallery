@@ -1,0 +1,590 @@
+/* ============================================
+   GLOBAL RESET & BASIC SETTINGS
+   - Removes default paddings/margins
+   - Ensures predictable box-sizing
+============================================ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   BODY LAYOUT & BACKGROUND
+   - Full viewport height
+   - Flex center layout
+   - Dark gradient background
+============================================ */
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  padding: 20px;
+}
+
+/* ============================================
+   HEADER SECTION
+   - Styling for the page header
+============================================ */
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.logo span {
+  color: #40e0d0;
+  font-weight: 300;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 30px rgba(64, 224, 208, 0.4);
+  }
+}
+
+/* ============================================
+   MAIN CONTAINER
+   - Main content wrapper styling
+============================================ */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   FILTER CONTAINER
+   - Styling for filter controls section
+============================================ */
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-section,
+.range-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.filter-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #40e0d0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================
+   FILTER BUTTONS
+   - Styling for filter control buttons
+============================================ */
+.buttons-div {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(149, 192, 230, 0.2),
+    rgba(78, 168, 248, 0.3)
+  );
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(78, 168, 248, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(
+    135deg,
+    rgba(149, 192, 230, 0.4),
+    rgba(78, 168, 248, 0.5)
+  );
+  box-shadow: 0 5px 15px rgba(78, 168, 248, 0.3);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #ff0080, #ff8c00);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+}
+
+/* ============================================
+   PRICE RANGE SLIDER
+   - Styling for range input and labels
+============================================ */
+.range-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.range-input-text {
+  padding: 8px 15px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  background: rgba(64, 224, 208, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.range-input-value-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#range-input {
+  width: 100%;
+  height: 10px;
+  -webkit-appearance: none;
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
+  border-radius: 5px;
+  outline: none;
+}
+
+#range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid #40e0d0;
+  box-shadow: 0 0 10px rgba(64, 224, 208, 0.8);
+  transition: all 0.3s;
+}
+
+#range-input::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(64, 224, 208, 1);
+}
+
+.input-value-text {
+  font-weight: 700;
+  color: #ff8c00;
+  font-size: 1.1rem;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.range-ticks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* ============================================
+   STATISTICS SECTION
+   - Styling for product statistics display
+============================================ */
+.stats-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 180px;
+}
+
+.stat-box i {
+  font-size: 2rem;
+  color: #40e0d0;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   PRODUCTS CONTAINER
+   - Grid layout for product cards
+============================================ */
+.product-container {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  min-width: 100%;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  min-height: 500px;
+}
+
+/* ============================================
+   PRODUCT CARD
+   - Styling for individual product items
+============================================ */
+.content-item {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(255, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.content-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(64, 224, 208, 0.4);
+}
+
+.content-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff0080, #40e0d0);
+  transition: left 0.5s ease;
+}
+
+.content-item:hover::before {
+  left: 25%;
+}
+
+.image-box {
+  position: relative;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.6s ease;
+}
+
+.description-box {
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(64, 224, 208, 0.8));
+  inset: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  padding: 1.5rem;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.image-box:hover .description-box {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.image-box:hover .image {
+  transform: scale(1.1);
+}
+
+.description-text {
+  text-align: center;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.name {
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #40e0d0;
+  font-weight: bold;
+  background: linear-gradient(45deg, #40e0d0, #20b2aa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 8px;
+}
+
+.price {
+  margin-top: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #ff0080, #ff8c00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ============================================
+   LOADING ANIMATION
+   - Styling for loading indicator
+============================================ */
+.loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.loading-element {
+  width: 100px;
+  opacity: 0;
+}
+
+.loading-element.show {
+  opacity: 1;
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   FOOTER
+   - Styling for page footer
+============================================ */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #40e0d0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff8c00;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   - Media queries for different screen sizes
+============================================ */
+@media screen and (max-width: 1200px) {
+  .filter-container {
+    flex-direction: column;
+  }
+
+  .filter-section,
+  .range-section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .buttons-div {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    min-width: 140px;
+  }
+
+  .range-div {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.creator-credit {
+  text-align: center;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heart {
+  color: #ff4757;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.2);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -3,7 +3,7 @@
 A responsive product showcase store built with **HTML**, **CSS**, and **vanilla JavaScript**. Designed for luxury electronics with dynamic filtering by price range and category.
 
 ## Live Demo
-🔗 [View Demo](https://mohammad-2012.github.io/luxury-collection)
+🔗 [View Demo](https://mohammad-2012.github.io/Luxury-Product-Gallery/)
 
 ## Features
 
